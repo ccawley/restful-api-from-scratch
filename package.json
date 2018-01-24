@@ -1,0 +1,29 @@
+{
+  "name": "restful-api-from-scratch",
+  "version": "1.0.0",
+  "description": "My first restful API according to MVC principles from scratch.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccawley/restful-api-from-scratch.git"
+  },
+  "author": "Curtis Cawley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ccawley/restful-api-from-scratch/issues"
+  },
+  "homepage": "https://github.com/ccawley/restful-api-from-scratch#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  }
+}
