@@ -25,7 +25,15 @@ function getQueenById(id) {
   return queen;
 }
 
+function createQueen(name, age, breed, power) {
+  let queen = { id: uuid(), name, age, breed, power };
+
+  queens.push(queen);
+  return queen;
+}
+
 module.exports = {
   getAll,
-  getQueenById
+  getQueenById,
+  createQueen
 };

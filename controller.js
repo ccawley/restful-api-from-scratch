@@ -15,7 +15,17 @@ let queensIdController = (req, res, next) => {
   return res.status(200).json(queen);
 }
 
+let createQueenController = (req, res, next) => {
+  let { name, age, breed, power } = req.body
+  let queen = model.createQueen(name, age, breed, power);
+
+  if (!name || !age || !breed || !power) return next({ error: 400, message: `Fields name, age, breed and power are required.`})
+
+  return res.status(201).json(queen);
+}
+
 module.exports = {
   dragQueensController,
-  queensIdController
+  queensIdController,
+  createQueenController
 }
