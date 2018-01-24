@@ -27,13 +27,30 @@ function getQueenById(id) {
 
 function createQueen(name, age, breed, power) {
   let queen = { id: uuid(), name, age, breed, power };
-
   queens.push(queen);
+  return queen;
+}
+
+function updateQueen(id, name, age, breed, power) {
+  let queen = queens.find(queen => queen.id === id);
+  queen.name = name;
+  queen.age = age;
+  queen.breed = breed;
+  queen.power = power;
+  return queen;
+}
+
+function deleteQueen(id) {
+  let queen = queens.find(queen => queen.id === id);
+  let index = queens.indexOf(queen);
+  queens.splice(index, 1);
   return queen;
 }
 
 module.exports = {
   getAll,
   getQueenById,
-  createQueen
+  createQueen,
+  updateQueen,
+  deleteQueen
 };
